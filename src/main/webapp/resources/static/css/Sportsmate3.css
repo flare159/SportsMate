@@ -1,0 +1,515 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    color: #ddd;
+    background-color: #121212;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#main1 {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+header {
+    background: #1e1e1e;
+    color: #fff;
+    padding: 30px 5%;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.hero {
+    background-size: cover;
+    color: #fff;
+    padding: 80px 20px;
+    text-align: center;
+    border-bottom: 2px solid white; /* 포인트 색상 */
+    position: relative;
+    line-height: 50px;
+}
+
+.hero h1 {
+    font-size: 40px;
+    margin: 0;
+}
+
+.hero p {
+    font-size: 20px;
+    margin: 20px 0;
+}
+
+.start_btn {
+    background: #ffffff; /* 포인트 색상 */
+    color: #000000; /* 포인트 색상 글자색 */
+    padding: 10px 20px;
+    margin: 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+.start_btn:hover {
+    background: #e0e0e0; /* 포인트 색상 다크 버전 */
+}
+
+.features {
+    background: #1e1e1e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    padding: 40px 5%;
+    flex-wrap: wrap;
+}
+
+.feature {
+    background: #1e1e1e;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 30%;
+    min-width: 250px;
+    text-align: center;
+    color: #eee;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.feature:hover {
+    transform: scale(1.1);
+}
+
+.feature img {
+    width: 100%;
+    height: auto;
+    max-height: 250px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.feature h2 {
+    font-size: 1.3em;
+    margin: 10px 0;
+}
+
+.feature p {
+    font-size: 0.9em;
+}
+
+.footer {
+    background: #1e1e1e;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-top: 2px solid white;
+}
+
+@media (max-width: 1450px) {
+    header, .features {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .hero {
+        padding: 60px 10px;
+    }
+
+    .start_btn {
+        padding: 10px 16px;
+        font-size: 16px;
+    }
+
+    .feature {
+        width: 60%;
+        max-width: none;
+    }
+
+    .feature img {
+        max-height: 220px;
+    }
+}
+
+#main2 {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.main-content {
+    display: flex;
+    height: calc(100% - 40px); /* Adjust height if needed */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.sidebar {
+    width: 250px;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.6);
+    position: relative;
+    height: auto;
+    flex-shrink: 0;
+}
+
+.login-container {
+    margin-bottom: 20px;
+}
+
+.login_form_mini {
+    background: rgba(28, 28, 28, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7);
+    margin-bottom: 20px;
+}
+
+.login_title_mini {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: white;
+}
+
+.user_info_mini {
+    margin-bottom: 20px;
+}
+
+.user_info_mini input {
+    width: 97%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 10px;
+    background-color: #333;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    font-size: 16px;
+    outline: none;
+}
+
+.box-button_mini {
+    display: flex;
+    justify-content: space-between;
+}
+
+#login_button_mini, #memplus_button_mini {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    background-color: rgba(0, 0, 0, 0.8); /* 불투명한 검정색 */
+    color: #fff;
+}
+
+#login_button_mini:hover, #memplus_button_mini:hover {
+    background-color: rgba(0, 0, 0, 0.9); /* 더 어두운 검정색 */
+}
+
+.form-button_mini {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.login_box_mini {
+    background-color: #17171B; /* 다크 배경색 */
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    font-size: 30px;
+    text-align: center;
+}
+
+.login_box_title_mini {
+    font-size: 24px;
+    text-align: center;
+    color: white;
+}
+
+.profile_mini_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 17vh;
+    margin-bottom: 20px; /* 하단 여백 추가 */
+}
+
+.profile_mini {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333; /* 프로필 사진이 없는 경우 배경색 */
+    border: 2px solid #444; /* 테두리 색상 */
+}
+
+.profile_mini img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hello_mini {
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.box-button_mini {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.mypage_button_mini, .logout_button_mini {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    background-color: rgba(0, 0, 0, 0.8); /* 불투명한 검정색 */
+    color: #fff;
+}
+
+.mypage_button_mini:hover, .logout_button_mini:hover {
+    background-color: rgba(0, 0, 0, 0.9); /* 더 어두운 검정색 */
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.menu_btn {
+    background-color: #333; /* 버튼 배경색 */
+    color: white; /* 버튼 텍스트 색상 */
+    border: none;
+    border-radius: 5px;
+    width: 230px; /* 버튼 너비 */
+    height: 40px; /* 버튼 높이 */
+    margin: 8px 0; /* 버튼 사이의 간격 */
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu_btn:hover {
+    background-color: #444;
+    transform: scale(1.05);
+}
+
+.menu_btn:active {
+    background-color: #555;
+    transform: scale(0.95);
+}
+
+.ranking_table {
+    width: 94%; /* 테이블의 너비를 줄입니다. 원하는 비율로 조정 가능합니다. */
+    margin: 0 auto; /* 테이블을 가운데 정렬합니다. */
+    border-collapse: collapse; /* 테이블 셀 간의 경계를 제거합니다. */
+    text-align: center;
+}
+
+.ranking th, .ranking td {
+    border: 1px solid #333; /* 셀의 경계선 색상 및 스타일을 설정합니다. */
+    padding: 7px; /* 셀의 안쪽 여백을 줄입니다. */
+}
+
+.ranking th {
+    background-color: #ffffff; /* 포인트 색상 */
+    color: #000000; /* 포인트 색상 글자색 */
+    font-weight: bold;
+}
+
+.ranking td {
+    font-size: 14px;
+}
+
+.board {
+    background-color: #121212; /* 다크모드 배경색 */
+    color: #ffffff; /* 글자 색상 */
+    padding: 30px; /* 패딩을 늘려 여백 확보 */
+    border-radius: 10px;
+    margin: 0px auto; /* 가로 중앙 정렬 */
+    max-width: 1250px; /* 최대 가로 크기 조정 */
+    width: 100%; /* 전체 폭 사용 */
+    overflow-x: auto; /* 가로 스크롤 가능 */
+}
+
+.board h1 {
+    color: #ffffff; /* 포인트 색상 */
+    font-family: 'Cafe24Decobox', sans-serif;
+    font-size: 32px; /* 제목 크기 증가 */
+    margin-bottom: 30px; /* 제목 아래 여백 증가 */
+}
+
+.board-controls {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px; /* 버튼 사이 여백 증가 */
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+.search-container select,
+.search-container input,
+.search-container button {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    border: 1px solid #333;
+    border-radius: 5px;
+    margin-right: 10px; /* 버튼 사이 여백 증가 */
+    padding: 10px; /* 패딩 증가 */
+    font-size: 16px; /* 폰트 사이즈 증가 */
+}
+
+.search-container button {
+    background-color: #ffffff; /* 포인트 색상 */
+    border: none;
+    color: #000000; /* 포인트 색상 글자색 */
+    cursor: pointer;
+}
+
+.search-container button:hover {
+    background-color: #e0e0e0; /* 포인트 색상 다크 버전 */
+}
+
+.write-button-container {
+    display: flex;
+    align-items: center;
+}
+
+.write-button {
+    background-color: #ffffff; /* 포인트 색상 */
+    border: none;
+    color: #000000; /* 포인트 색상 글자색 */
+    padding: 10px 20px; /* 버튼 패딩 증가 */
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px; /* 폰트 사이즈 증가 */
+}
+
+.write-button:hover {
+    background-color: #e0e0e0; /* 포인트 색상 다크 버전 */
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 0 auto;
+    border-radius: 15px;
+    border: none;
+    overflow: hidden;
+    background: #1e1e1e;
+}
+
+thead th {
+    background-color: #ffffff; /* 포인트 색상 */
+    color: #000000; /* 포인트 색상 글자색 */
+    padding: 12px; /* 헤더 셀 패딩 증가 */
+    border: 1px solid #1e1e1e; /* 헤더 셀 경계선 */
+}
+
+tbody td {
+    padding: 12px; /* 셀 패딩 증가 */
+    text-align: center;
+    border: 1px solid #333; /* 셀 경계선 */
+}
+
+tbody td a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+tbody tr {
+    border-bottom: 1px solid #333; /* 행 경계선 */
+}
+
+tbody img {
+    width: 180px; /* 썸네일 크기 조정 */
+    height: 120px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.pagination {
+    text-align: center;
+    margin-top: 20px;
+    color: #ffffff;
+}
+
+@media (max-width: 1115px) {
+    .main-content {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 94%;
+        box-shadow: none;
+        margin-bottom: 20px;
+    }
+
+    .menu_btn {
+        width: 94%;
+        box-shadow: none;
+        margin-bottom: 20px;
+    }
+
+    .board {
+        width: 94%;
+        box-shadow: none;
+        margin-bottom: 20px;
+    }
+}
+
+
